@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Free Time",
+    "version": "1.0",
+    "author": "Cesar Carrillo",
+
+    "description": "Hide suggested videos and comments on YouTube.",
+    "icons": { "48": "icons/icon-48x48.png" },
+    
+    "permissions": [ "storage" ],
+
+    "content_scripts": [
+        {
+            "matches": [ "*://*.youtube.com/*" ],
+            "js": [ "script.js" ]
+        }
+    ],
+
+    "browser_action": {
+        "default_icon": { "38": "icons/icon-38x38.png" },
+        "default_title": "Free Time Settings",
+        "default_popup": "settings.html"
+    }
+}
